@@ -5,6 +5,8 @@
 **a. Initial design**
 
 - Briefly describe your initial UML design.
+separating data models from the scheduling logic. 
+
 - What classes did you include, and what responsibilities did you assign to each?
 
 **b. Design changes**
@@ -69,3 +71,48 @@
 **c. Key takeaway**
 
 - What is one important thing you learned about designing systems or working with AI on this project?
+
+
+## UML 
+```mermaid
+classDiagram
+    class Owner {
+        +name: string
+        +availableTime: int
+        +preferences: list
+        +addPreference(pref)
+        +updateAvailableTime(minutes)
+    }
+
+    class Pet {
+        +name: string
+        +species: string
+        +age: int
+        +needs: list
+        +addNeed(need)
+        +getInfo()
+    }
+
+    class Task {
+        +title: string
+        +durationMinutes: int
+        +priority: string
+        +category: string
+        +isHighPriority()
+        +getTaskDetails()
+    }
+
+    class Scheduler {
+        +tasks: list
+        +timeAvailable: int
+        +addTask(task)
+        +generateSchedule()
+        +sortByPriority()
+        +explainPlan()
+    }
+
+    Owner --> Pet : cares for
+    Pet --> Task : needs
+    Scheduler --> Task : schedules
+    Owner --> Scheduler : uses
+```
