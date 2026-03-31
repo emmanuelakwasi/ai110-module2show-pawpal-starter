@@ -5,14 +5,16 @@
 **a. Initial design**
 
 - Briefly describe your initial UML design.
-separating data models from the scheduling logic. 
+separating data models from the scheduling logic. I included a Pet class to store information about the pet, an Owner class to represent the user’s availability and preferences, and a Task class for care activities like feeding, walking, and medication with details such as duration and priority. I also designed a Scheduler class to decide which tasks should be included in the daily plan and in what order. Finally, I planned for a Schedule or DailyPlan class to hold the completed plan. I assigned each class a clear responsibility so the system would be easier to organize, test, and improve later.
 
 - What classes did you include, and what responsibilities did you assign to each?
 
 **b. Design changes**
 
 - Did your design change during implementation?
+Yes  I did
 - If yes, describe at least one change and why you made it.
+To make my structure solid, , i realized #Task is not clearly tied to # Pet. I added a pet_name field to Task
 
 ---
 
@@ -27,7 +29,7 @@ separating data models from the scheduling logic.
 
 - Describe one tradeoff your scheduler makes.
 - Why is that tradeoff reasonable for this scenario?
-
+essential tasks happen first
 ---
 
 ## 3. AI Collaboration
@@ -77,42 +79,52 @@ separating data models from the scheduling logic.
 ```mermaid
 classDiagram
     class Owner {
-        +name: string
-        +availableTime: int
-        +preferences: list
-        +addPreference(pref)
-        +updateAvailableTime(minutes)
+        +name: str
+        +available_time: int
+        +pets: list[Pet]
+        +add_pet(pet)
+        +get_all_tasks()
     }
 
     class Pet {
-        +name: string
-        +species: string
+        +name: str
+        +species: str
         +age: int
-        +needs: list
-        +addNeed(need)
-        +getInfo()
+        +tasks: list[Task]
+        +add_task(task)
+        +get_info()
     }
 
     class Task {
-        +title: string
-        +durationMinutes: int
-        +priority: string
-        +category: string
-        +isHighPriority()
-        +getTaskDetails()
+        +description: str
+        +time_minutes: int
+        +frequency: str
+        +priority: str
+        +completed: bool
+        +pet_name: str
+        +time: str
+        +__post_init__()
+        +priority_value()
+        +mark_complete()
+        +create_next_occurrence()
+        +get_summary()
     }
 
     class Scheduler {
-        +tasks: list
-        +timeAvailable: int
-        +addTask(task)
-        +generateSchedule()
-        +sortByPriority()
-        +explainPlan()
+        +owner: Owner
+        +get_tasks()
+        +filter_tasks(completed, pet_name, tasks)
+        +sort_by_time(tasks)
+        +detect_time_conflicts(tasks)
+        +organize_tasks(tasks)
+        +generate_schedule()
+        +get_unscheduled_tasks()
+        +format_schedule()
+        +mark_task_complete(task)
     }
 
-    Owner --> Pet : cares for
-    Pet --> Task : needs
-    Scheduler --> Task : schedules
-    Owner --> Scheduler : uses
+    Owner "1" --> "0..*" Pet : owns
+    Pet "1" --> "0..*" Task : has
+    Scheduler --> Owner : uses
+    Scheduler --> Task : sorts / filters / schedules
 ```

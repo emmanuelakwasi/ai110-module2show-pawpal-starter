@@ -1,0 +1,89 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4C6A88" />
+    </marker>
+    <style>
+      .title { font: 700 18px 'Segoe UI', Arial, sans-serif; fill: #17324d; }
+      .text { font: 13px 'Segoe UI', Arial, sans-serif; fill: #243b53; }
+      .small { font: 12px 'Segoe UI', Arial, sans-serif; fill: #486581; }
+      .box { fill: #ffffff; stroke: #bfd0e0; stroke-width: 2; rx: 12; }
+      .header { fill: #eef4fa; }
+      .line { stroke: #4c6a88; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1400" height="900" fill="#f6f8fb" />
+  <text x="50" y="48" class="title" style="font-size: 28px;">PawPal+ Final UML</text>
+  <text x="50" y="74" class="small">Updated to match the final implementation in pawpal_system.py</text>
+
+  <!-- Owner -->
+  <rect x="55" y="120" width="280" height="200" class="box"/>
+  <rect x="55" y="120" width="280" height="40" class="header"/>
+  <text x="170" y="145" text-anchor="middle" class="title">Owner</text>
+  <text x="75" y="185" class="text">+ name: str</text>
+  <text x="75" y="208" class="text">+ available_time: int</text>
+  <text x="75" y="231" class="text">+ pets: list[Pet]</text>
+  <line x1="68" y1="245" x2="322" y2="245" stroke="#d9e2ec"/>
+  <text x="75" y="270" class="text">+ add_pet(pet)</text>
+  <text x="75" y="293" class="text">+ get_all_tasks()</text>
+
+  <!-- Pet -->
+  <rect x="390" y="120" width="290" height="215" class="box"/>
+  <rect x="390" y="120" width="290" height="40" class="header"/>
+  <text x="535" y="145" text-anchor="middle" class="title">Pet</text>
+  <text x="410" y="185" class="text">+ name: str</text>
+  <text x="410" y="208" class="text">+ species: str</text>
+  <text x="410" y="231" class="text">+ age: int</text>
+  <text x="410" y="254" class="text">+ tasks: list[Task]</text>
+  <line x1="403" y1="268" x2="667" y2="268" stroke="#d9e2ec"/>
+  <text x="410" y="293" class="text">+ add_task(task)</text>
+  <text x="410" y="316" class="text">+ get_info()</text>
+
+  <!-- Task -->
+  <rect x="735" y="90" width="320" height="360" class="box"/>
+  <rect x="735" y="90" width="320" height="40" class="header"/>
+  <text x="895" y="115" text-anchor="middle" class="title">Task</text>
+  <text x="755" y="155" class="text">+ description: str</text>
+  <text x="755" y="178" class="text">+ time_minutes: int</text>
+  <text x="755" y="201" class="text">+ frequency: str</text>
+  <text x="755" y="224" class="text">+ priority: str</text>
+  <text x="755" y="247" class="text">+ completed: bool</text>
+  <text x="755" y="270" class="text">+ pet_name: str</text>
+  <text x="755" y="293" class="text">+ time: str</text>
+  <line x1="748" y1="307" x2="1042" y2="307" stroke="#d9e2ec"/>
+  <text x="755" y="332" class="text">+ __post_init__()</text>
+  <text x="755" y="355" class="text">+ priority_value()</text>
+  <text x="755" y="378" class="text">+ mark_complete()</text>
+  <text x="755" y="401" class="text">+ create_next_occurrence()</text>
+  <text x="755" y="424" class="text">+ get_summary()</text>
+
+  <!-- Scheduler -->
+  <rect x="430" y="470" width="540" height="310" class="box"/>
+  <rect x="430" y="470" width="540" height="40" class="header"/>
+  <text x="700" y="495" text-anchor="middle" class="title">Scheduler</text>
+  <text x="450" y="535" class="text">+ owner: Owner</text>
+  <line x1="443" y1="548" x2="957" y2="548" stroke="#d9e2ec"/>
+  <text x="450" y="575" class="text">+ get_tasks()</text>
+  <text x="450" y="598" class="text">+ filter_tasks(completed, pet_name, tasks)</text>
+  <text x="450" y="621" class="text">+ sort_by_time(tasks)</text>
+  <text x="450" y="644" class="text">+ detect_time_conflicts(tasks)</text>
+  <text x="450" y="667" class="text">+ organize_tasks(tasks)</text>
+  <text x="450" y="690" class="text">+ generate_schedule()</text>
+  <text x="450" y="713" class="text">+ get_unscheduled_tasks()</text>
+  <text x="450" y="736" class="text">+ format_schedule()</text>
+  <text x="450" y="759" class="text">+ mark_task_complete(task)</text>
+
+  <!-- Relationships -->
+  <path d="M 335 220 C 360 220, 365 220, 390 220" class="line"/>
+  <text x="362" y="210" class="small">owns 0..*</text>
+
+  <path d="M 680 225 C 705 225, 710 225, 735 225" class="line"/>
+  <text x="690" y="215" class="small">has 0..*</text>
+
+  <path d="M 560 470 C 520 420, 430 330, 335 260" class="line"/>
+  <text x="410" y="400" class="small">uses</text>
+
+  <path d="M 820 470 C 860 430, 920 400, 955 365" class="line"/>
+  <text x="920" y="420" class="small">sorts / filters / schedules</text>
+</svg>

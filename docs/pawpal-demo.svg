@@ -1,0 +1,76 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" fill="#F6F8FB"/>
+  <rect x="32" y="24" width="1216" height="672" rx="20" fill="white" stroke="#D7E0EA"/>
+
+  <text x="64" y="78" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700" fill="#16324F">🐾 PawPal+</text>
+  <text x="64" y="108" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#4B647A">Priority-aware pet care scheduling with conflict warnings and smart filtering</text>
+
+  <rect x="64" y="138" width="360" height="510" rx="16" fill="#F9FBFD" stroke="#DCE6F0"/>
+  <text x="88" y="176" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#17324D">Plan your day</text>
+
+  <text x="88" y="214" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#5C7186">Owner name</text>
+  <rect x="88" y="224" width="312" height="38" rx="8" fill="white" stroke="#C9D7E3"/>
+  <text x="102" y="248" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#22384D">Jordan</text>
+
+  <text x="88" y="286" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#5C7186">Pet name</text>
+  <rect x="88" y="296" width="312" height="38" rx="8" fill="white" stroke="#C9D7E3"/>
+  <text x="102" y="320" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#22384D">Mochi</text>
+
+  <text x="88" y="358" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#5C7186">Available time</text>
+  <rect x="88" y="368" width="312" height="38" rx="8" fill="white" stroke="#C9D7E3"/>
+  <text x="102" y="392" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#22384D">30 minutes</text>
+
+  <text x="88" y="438" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#17324D">Tasks</text>
+  <rect x="88" y="454" width="312" height="92" rx="10" fill="#FFFFFF" stroke="#D9E3EC"/>
+  <text x="102" y="480" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#22384D">08:00 • Feed breakfast • High</text>
+  <text x="102" y="505" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#22384D">08:00 • Give medicine • High</text>
+  <text x="102" y="530" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#22384D">09:00 • Clean litter • Medium</text>
+
+  <rect x="88" y="572" width="160" height="44" rx="10" fill="#0F9D58"/>
+  <text x="120" y="600" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="white">Generate schedule</text>
+
+  <rect x="452" y="138" width="740" height="510" rx="16" fill="#F9FBFD" stroke="#DCE6F0"/>
+  <text x="476" y="176" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#17324D">Today's scheduled tasks</text>
+
+  <rect x="476" y="194" width="692" height="52" rx="10" fill="#EAF7EF" stroke="#CDEAD8"/>
+  <text x="496" y="225" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#17663A">✓ Schedule generated successfully</text>
+
+  <rect x="476" y="258" width="692" height="56" rx="10" fill="#FFF4E5" stroke="#F3D2A6"/>
+  <text x="496" y="283" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#8A4B08">⚠ Warning: 08:00 has overlapping tasks</text>
+  <text x="496" y="303" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#7A5B33">Feed breakfast (Mochi), Give medicine (Luna)</text>
+
+  <rect x="476" y="332" width="692" height="240" rx="12" fill="white" stroke="#D9E3EC"/>
+  <rect x="476" y="332" width="692" height="42" rx="12" fill="#EEF3F8"/>
+  <text x="496" y="358" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#385166">Time</text>
+  <text x="590" y="358" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#385166">Task</text>
+  <text x="820" y="358" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#385166">Pet</text>
+  <text x="910" y="358" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#385166">Priority</text>
+  <text x="1030" y="358" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#385166">Status</text>
+
+  <line x1="476" y1="414" x2="1168" y2="414" stroke="#E5ECF2"/>
+  <line x1="476" y1="454" x2="1168" y2="454" stroke="#E5ECF2"/>
+  <line x1="476" y1="494" x2="1168" y2="494" stroke="#E5ECF2"/>
+
+  <text x="496" y="399" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#22384D">08:00</text>
+  <text x="590" y="399" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#22384D">Give medicine</text>
+  <text x="820" y="399" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#22384D">Luna</text>
+  <text x="910" y="399" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#22384D">High</text>
+  <text x="1030" y="399" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#17663A">Pending</text>
+
+  <text x="496" y="439" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#22384D">08:00</text>
+  <text x="590" y="439" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#22384D">Feed breakfast</text>
+  <text x="820" y="439" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#22384D">Mochi</text>
+  <text x="910" y="439" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#22384D">High</text>
+  <text x="1030" y="439" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#17663A">Pending</text>
+
+  <text x="496" y="479" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#22384D">09:00</text>
+  <text x="590" y="479" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#22384D">Clean litter</text>
+  <text x="820" y="479" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#22384D">Luna</text>
+  <text x="910" y="479" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#22384D">Medium</text>
+  <text x="1030" y="479" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#17663A">Pending</text>
+
+  <rect x="476" y="590" width="220" height="34" rx="8" fill="#EAF1F8"/>
+  <text x="495" y="612" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#36546D">Tasks scheduled: 3</text>
+  <rect x="714" y="590" width="220" height="34" rx="8" fill="#EAF1F8"/>
+  <text x="733" y="612" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#36546D">Minutes planned: 25 / 30</text>
+</svg>
